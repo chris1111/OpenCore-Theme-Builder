@@ -1,0 +1,79 @@
+#!/bin/bash
+# OpenCore Theme Builder
+# Copyright (c) 2023, chris1111. All Right Reserved
+# Credit: Acidanthera, blackosx, pngquant.
+# Vars
+apptitle="OpenCore Theme Builder"
+version="1.0"
+PARENTDIR=$(dirname "$0")
+cd "$PARENTDIR"
+IN_DIR="/Private/tmp/Icon"
+ZIP_DIR="/Private/tmp"
+OUT_DIR="/Private/tmp/OcBinaryData-master/Resources/Image/chris1111/Flavours-Builder"
+Master_DIR="/Private/tmp"
+mkdir -p "${Master_DIR}/OcBinaryData-master/Resources/Image/chris1111/Flavours-Builder"
+
+[[ ! -d "$IN_DIR" ]] && mkdir -p "$IN_DIR"
+[[ ! -d "$OUT_DIR" ]] && mkdir -p "$OUT_DIR"
+
+
+for pngFile in "$IN_DIR"/*.png
+do
+
+  filename=$(basename -- "$pngFile")
+  filenameNoExt="${filename%*.png}"
+
+  cp "$pngFile" "$OUT_DIR"
+
+  width=$(sips -g pixelWidth "$pngFile")
+  height=$(sips -g pixelHeight "$pngFile")
+
+  width="${width##*: }"
+  height="${height##*: }"
+
+  halfWidth=$(( width/2 ))
+  halfHeight=$(( height/2 ))
+
+  sips --deleteProperty profile -Z $halfWidth $halfHeight "$pngFile" --out "$OUT_DIR"/"$filenameNoExt"_sml.png &>/dev/null
+
+  ./pngquant --quality=90 --ext=.png --force "$OUT_DIR"/*.png
+
+  ./icnspack "$OUT_DIR"/"$filenameNoExt".icns "$OUT_DIR"/"$filenameNoExt"_sml.png "$OUT_DIR"/"$filenameNoExt".png && echo "Generated $filenameNoExt.icns" && rm "$OUT_DIR"/*.png
+
+done
+Sleep 1
+cd $ZIP_DIR/OcBinaryData-master
+zip -r $ZIP_DIR/Flavours-Builder.zip Resources
+Sleep 1
+
+Sleep 1
+osascript <<EOD
+  display dialog "
+Please select a destination to save the file Flavours-Builder.zip
+
+NOTE: If you have already a Flavours-Builder.zip in this location, you must move it or rename to save another one otherwise it will be replaced." with icon POSIX file "/Private/tmp/Appicon.icns" buttons {"Save"} default button {"Save"}			{"Save"}
+EOD
+
+  # Get image file location
+  imagepath=`/usr/bin/osascript << EOT
+    tell application "Finder"
+        activate	set sourceFolder to (POSIX file "/Private/tmp/Flavours-Builder.zip") as alias	set imagepath to choose folder with prompt "Choose the destination location" default location (path to desktop)	duplicate sourceFolder to folder imagepath with replacingend tell
+delay 1set myFile to "/Private/tmp/Flavours-Builder.zip"
+set myFolder to "/Private/tmp/OcBinaryData-master"
+set myIconFolder to "/Private/tmp/Icon"
+set myIcon to "/Private/tmp/AppIcon.icns"
+set OCDataCurl to "/Private/tmp/master.zip"
+set myCurl to "/Private/tmp/Themes"try        do shell script "rm -rf " & quoted form of myFile
+        do shell script "rm -rf " & quoted form of myFolder
+        do shell script "rm -rf " & quoted form of myIconFolder
+        do shell script "rm -rf " & quoted form of myIcon
+        do shell script "rm -rf " & quoted form of OCDataCurl
+        do shell script "rm -rf " & quoted form of myCurlend try
+     return
+  EOT`
+
+echo "
+******************************************************
+Files is generates!
+******************************************************"
+osascript -e 'display notification "OpenCore Theme Builder" with title "'"$apptitle"'" subtitle "All is Done"'

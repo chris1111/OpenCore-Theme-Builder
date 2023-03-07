@@ -1,0 +1,71 @@
+#!/bin/bash
+# OpenCore Theme Builder
+# Copyright (c) 2023, chris1111. All Right Reserved
+# Credit: Acidanthera, blackosx, pngquant.
+# Vars
+apptitle="# OpenCore Theme Builder"
+version="1.0"
+PARENTDIR=$(dirname "$0")
+cd "$PARENTDIR"
+cp -rp ./AppIcon.icns /Private/tmp/AppIcon.icns
+# Set Icon directory and file
+iconfile="/Private/tmp/AppIcon.icns"
+TempDir="/Private/tmp/Icon"
+CURL_DIR="/Private/tmp/Themes"
+# Remove file if exist
+if [ "/Private/tmp/Resource" ]; then
+	rm -rf "/Private/tmp/Resource"
+fi
+
+if [ "/Private/tmp/Icon" ]; then
+	rm -rf "/Private/tmp/Icon"
+fi
+
+if [ "/Private/tmp/Resources.zip" ]; then
+	rm -rf "/Private/tmp/master.zip"
+fi
+
+if [ "/Private/tmp/Resources" ]; then
+	rm -rf "/Private/tmp/OcBinaryData-master"
+fi
+
+if [ "/Private/tmp/Themes" ]; then
+	rm -rf "/Private/tmp/Themes"
+fi
+
+Sleep 1
+# Set Droping directory and file
+for files in "$@" ;do
+
+# Select Proceed
+osascript <<EOD
+  tell application "OpenCore-Theme-Builder"
+      activate
+  end tell
+EOD
+mkdir -p "${TempDir}"
+mkdir -p "${CURL_DIR}"
+Sleep 1
+echo "Image processing :"
+Sleep 1
+cp -R "$@" "${TempDir}/Background.png"
+./curl.sh
+sleep 1
+osascript <<EOD
+  tell application "OpenCore-Theme-Builder"
+      activate
+  end tell
+EOD
+./Builder "${TempDir}"
+
+# Exit App
+EXIT=/Private/tmp/Flavours-Builder.zip
+echo Save ➣ $EXIT
+echo "All is Done. Enjoy! "
+
+#Exit tool
+if [ ! -d $EXIT ]; then
+    echo " "
+ exit 1
+fi
+done

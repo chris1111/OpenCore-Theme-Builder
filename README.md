@@ -1,7 +1,7 @@
 # OpenCore-Theme-Builder
 A tool to create themes from a Background image 2x the size of your screen, simple as that.
 - The .png icons files comes from my favorites [Flavours Icons Set](https://github.com/chris1111/My-Simple-OC-Themes/tree/master/SSD_Icons/ZIP)
-- View ➤ [Icon Set](https://github.com/chris1111/OpenCore-Theme-Builder/blob/Master/IconSet.md)
+- View ➤ [Icon Set (Apple13)](https://github.com/chris1111/OpenCore-Theme-Builder/blob/Master/IconSet.md)
 ### Contribute to this project:
 - To add an Icon Set to this project, you need to Fork this repos and add your zip file containing all the .png icons for your theme and make a pull requests; this is very simple and then I will modify the [curl.sh](https://github.com/chris1111/OpenCore-Theme-Builder/blob/Master/App/OpenCore-Theme-Builder.app/Contents/Resources/curl.sh) script if you have not already done
 

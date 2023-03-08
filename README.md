@@ -13,5 +13,3 @@ A tool to create themes from a Background image 2x the size of your screen, simp
 
 [![Modular Image Creation](https://user-images.githubusercontent.com/6248794/218287389-96444e32-0bf1-4886-9632-ccd2e1f3614d.png )](https://www.youtube.com/watch?v=Xk39sthLGLc)
 
-
-### How to create are own complete themes ➤ [OpenCanopy-Generator](https://github.com/chris1111/OpenCanopy-Generator)

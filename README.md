@@ -8,3 +8,8 @@ A tool to create themes from a Background image 2x the size of your screen, simp
 ![Screenshot-1 2023-03-07 at 6 26 49 PM](https://user-images.githubusercontent.com/6248794/223579467-38a9a409-e359-4ba6-8ec1-196e3ccc9b7c.png)
 
 ![Screenshot 2023-03-07 at 6 26 49 PM](https://user-images.githubusercontent.com/6248794/223579083-503e6de4-57e3-42b7-b7f7-e09ef243a1b5.png)
+
+### Follow every steps in the Video ⬇︎ 
+
+[![Modular Image Creation](https://user-images.githubusercontent.com/6248794/218287389-96444e32-0bf1-4886-9632-ccd2e1f3614d.png )](https://www.youtube.com/watch?v=Xk39sthLGLc)
+

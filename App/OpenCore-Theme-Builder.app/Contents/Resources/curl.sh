@@ -17,9 +17,18 @@ read -r -d '' applescriptCode <<'EOF'
 ⬇︎ IconSet List:
 ***************
 
-Flavours-AppleDiskFlavours-BlueFlavours-BorderFlavours-CleanDarkFlavours-DarkFlavours-DarkSideFlavours-DesignFlavours-FrameFlavours-IconsFlavours-maOSFlavours-MetallicFlavours-Paper
+Flavours-AppleDisk
+Flavours-Blue  
+Flavours-Border
+Flavours-CleanDarkFlavours-Dark
+Flavours-DarkSideFlavours-Design
+Flavours-FrameFlavours-Icons
+Flavours-maOSFlavours-Metallic
+Flavours-Paper
+Flavours-Tech
 Flavours-X
-NaturaliMacNaturalMacBook
+NaturaliMac
+NaturalMacBook
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 Copy and paste in the dialog box the IconSet you want to have?
 Or type the name, be sure to respect Uppercase and other punctuation!

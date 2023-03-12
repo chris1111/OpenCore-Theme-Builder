@@ -20,10 +20,14 @@ read -r -d '' applescriptCode <<'EOF'
 Flavours-AppleDisk
 Flavours-Blue  
 Flavours-Border
-Flavours-CleanDarkFlavours-Dark
-Flavours-DarkSideFlavours-Design
-Flavours-FrameFlavours-Icons
-Flavours-maOSFlavours-Metallic
+Flavours-CleanDark
+Flavours-Dark
+Flavours-DarkSide
+Flavours-Design
+Flavours-Frame
+Flavours-Icons
+Flavours-maOS
+Flavours-Metallic
 Flavours-Paper
 Flavours-Tech
 Flavours-X
@@ -34,7 +38,7 @@ Copy and paste in the dialog box the IconSet you want to have?
 Or type the name, be sure to respect Uppercase and other punctuation!
 The output theme name will be Flavours-Builder.
 This will also download Acidanthera OcBinaryData.
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -" default answer "" with icon 0)
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -" default answer "" with icon 2)
    return dialogText
 EOF
 

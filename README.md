@@ -7,7 +7,8 @@ A tool to create themes from a Background image 2x the size of your screen, simp
 
 ![Screenshot-1 2023-03-07 at 6 26 49 PM](https://user-images.githubusercontent.com/6248794/223579467-38a9a409-e359-4ba6-8ec1-196e3ccc9b7c.png)
 
-![Screenshot](https://user-images.githubusercontent.com/6248794/224551555-f171f611-140d-4902-9e58-9968805d0e06.png)
+![Screenshot](https://github.com/chris1111/OpenCore-Theme-Builder/assets/6248794/6b5e638b-f1f8-47a7-96c9-4566017ef03f)
+
 
 
 ### Follow every steps in the Video ⬇︎ 

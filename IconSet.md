@@ -4,6 +4,6 @@ View-Icon Set|
 
 ---
 
-<img src="IconSet.png" alt="IconSet" style="width:25%;">
+<img src="IconSet.png" alt="IconSet" style="width:100%;">
 
 

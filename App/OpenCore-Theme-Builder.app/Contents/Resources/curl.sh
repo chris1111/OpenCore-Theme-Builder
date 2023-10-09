@@ -17,6 +17,7 @@ read -r -d '' applescriptCode <<'EOF'
 ⬇︎ IconSet List:
 ***************
 
+Flavours-BlackWhiteFlavours-DevFlavours-RingFlavours-T
 Flavours-AppleDisk
 Flavours-Blue  
 Flavours-Border

@@ -32,6 +32,8 @@ Flavours-Icons
 Flavours-maOS
 Flavours-Metallic
 Flavours-Paper
+Flavours-ShadowRing
+Flavours-Square
 Flavours-Tech
 Flavours-X
 NaturaliMac

@@ -16,8 +16,9 @@ read -r -d '' applescriptCode <<'EOF'
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 ⬇︎ IconSet List:
 ***************
-
+Apple-Fast
 Flavours-BlackWhiteFlavours-DevFlavours-RingFlavours-T
+Flavours-Titanium
 Flavours-AppleDisk
 Flavours-Blue  
 Flavours-Border
